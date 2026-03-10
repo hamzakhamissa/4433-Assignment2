@@ -1,0 +1,59 @@
+Part 1 - Assignment 2
+
+1. Indexing
+
+1.1 Basic Indexing
+
+a) Why might we break an index into shards
+We break an index into shards so the data can be split across multiple nodes, which helps Elasticsearch scale and process searches faster.
+
+b) Why might we replicate an index
+Replication improves fault tolerance and read performance by keeping duplicate shard copies on other nodes.
+
+c) Why is cluster health yellow
+The cluster health is yellow because replica shards are configured, but since there is only one node in the cluster, the replicas cannot be assigned.
+
+1.2 Indexing Reddit
+
+a) Command used to verify there were no indices:
+curl -XGET "localhost:9200/_cat/indices?v"
+
+b) Name of index created:
+comments
+
+c) How large is index (pri.store.size)
+31.8mb
+
+2. Search
+
+a) Do the three queries return different sets of documents? How can you tell?
+Yes, they return different sets:
+- 90 for "cat", 
+- 43 for "cats", 
+- 7 for "cat cats" with AND, and the top document IDs are not the same across queries.
+
+b) Highest score for each query:
+- Query 1 (cat): 10.503806
+- Query 2 (cats): 11.629242
+- Query 3 (cat cats, operator=and): 18.84402
+
+c) What can you deduce about default stemming?
+it looks like the default setup is not applying English stemming in a way that makes "cat" and "cats" equivalent, since they return different hit counts and different results.
+
+d) Command to check whether Elasticsearch removes a common English stopword:
+curl -XGET 'localhost:9200/_search?pretty' -H 'Content-Type: application/json' -d '{ "query": { "match": { "body": { "query": "and" } } } }'
+
+3. Analyzers
+
+a) Command to delete all indices
+curl -XDELETE "localhost:9200/comments"
+
+b) Re-run the three queries
+After applying `my_analyzer` and re-indexing, results changed dramatically. 
+- Query 1 ("cat") and Query 2 ("cats") now return identical results: 126 hits each with identical max scores (10.429893), confirming that stemming collapses "cat" and "cats" to the same token. 
+- Query 3 ("cat cats" with AND) also returns 126 hits with max score 20.859785, because with stemming the two terms are the same stem, the AND condition is trivially satisfied for every document matching the stem, so results match Q1/Q2 exactly.
+
+c) Did index size become larger or smaller, and why?
+The index became smaller (from  31.8mb with default analyzer to 25.1mb with my_analyzer). This is due to multiple words 'cat' 'cats' 'catting' all collapsing to the same stem of 'cat', therefore the index needs ot store less unique terms.
+
+

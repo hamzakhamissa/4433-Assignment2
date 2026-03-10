@@ -1,0 +1,197 @@
+Part 2 - Assignment 2
+
+1. The Lucene Demo
+
+Query results (java MySearchFiles < testcases.txt):
+
+his fiery sword:
+5 total matching documents
+1. documents/RJ3.txt
+2. documents/RJ5.txt
+3. documents/RJ4.txt
+4. documents/RJ9.txt
+5. documents/RJ6.txt
+
+ALAS O LOVE:
+5 total matching documents
+1. documents/RJ6.txt
+2. documents/RJ8.txt
+3. documents/RJ7.txt
+4. documents/RJ1.txt
+5. documents/RJ10.txt
+
+and:
+8 total matching documents
+1. documents/RJ3.txt
+2. documents/RJ10.txt
+3. documents/RJ5.txt
+4. documents/RJ2.txt
+5. documents/RJ4.txt
+6. documents/RJ8.txt
+7. documents/RJ7.txt
+8. documents/RJ1.txt
+
+reckon:
+0 total matching documents
+
+love:
+4 total matching documents
+1. documents/RJ6.txt
+2. documents/RJ7.txt
+3. documents/RJ1.txt
+4. documents/RJ10.txt
+
+fair:
+3 total matching documents
+1. documents/RJ9.txt
+2. documents/RJ10.txt
+3. documents/RJ1.txt
+
+a) Does the Lucene 8.7.0 demo use stopwords?
+No. The query "and" returns 8 matching documents, so common words are not being filtered out.
+
+b) Does the Lucene 8.7.0 demo do stemming? If so, what stemmer does it use?
+No. Stemming is not applied. The query "reckon" returns 0 results, which suggests exact token matching with no normalization of word forms.
+
+c) What is the default similarity metric used by the Lucene 8.7.0 demo?
+The default is BM25Similarity. This cannot be reliably deduced from the results above since scores are not shown by default, so it is confirmed from the Lucene API documentation.
+
+2. Modifying the Demo
+
+2.1 Stopping
+
+Query results after adding custom stopword list (about, dost, from, hath, his, O, that, the, thou):
+
+his fiery sword:
+Searching for: fiery sword
+1 total matching documents
+1. documents/RJ3.txt
+
+ALAS O LOVE:
+Searching for: alas love
+4 total matching documents
+1. documents/RJ6.txt
+2. documents/RJ7.txt
+3. documents/RJ1.txt
+4. documents/RJ10.txt
+
+and:
+8 total matching documents
+1. documents/RJ3.txt
+2. documents/RJ10.txt
+3. documents/RJ5.txt
+4. documents/RJ2.txt
+5. documents/RJ4.txt
+6. documents/RJ8.txt
+7. documents/RJ7.txt
+8. documents/RJ1.txt
+
+reckon:
+0 total matching documents
+
+love:
+4 total matching documents
+1. documents/RJ6.txt
+2. documents/RJ7.txt
+3. documents/RJ1.txt
+4. documents/RJ10.txt
+
+fair:
+3 total matching documents
+1. documents/RJ9.txt
+2. documents/RJ10.txt
+3. documents/RJ1.txt
+
+2.2 Stemming
+
+Query results after adding Porter stemmer
+
+his fiery sword:
+Searching for: fieri sword
+1 total matching documents
+1. documents/RJ3.txt
+
+ALAS O LOVE:
+Searching for: ala love
+5 total matching documents
+1. documents/RJ6.txt
+2. documents/RJ7.txt
+3. documents/RJ8.txt
+4. documents/RJ1.txt
+5. documents/RJ10.txt
+
+and:
+8 total matching documents
+1. documents/RJ3.txt
+2. documents/RJ10.txt
+3. documents/RJ5.txt
+4. documents/RJ2.txt
+5. documents/RJ4.txt
+6. documents/RJ8.txt
+7. documents/RJ7.txt
+8. documents/RJ1.txt
+
+reckon:
+1 total matching documents
+1. documents/RJ10.txt
+
+love:
+5 total matching documents
+1. documents/RJ6.txt
+2. documents/RJ7.txt
+3. documents/RJ8.txt
+4. documents/RJ1.txt
+5. documents/RJ10.txt
+
+fair:
+3 total matching documents
+1. documents/RJ9.txt
+2. documents/RJ10.txt
+3. documents/RJ1.txt
+
+2.3 Similarity
+
+Query results after switching to TFIDF
+
+his fiery sword:
+Searching for: fieri sword
+1 total matching documents
+1. documents/RJ3.txt
+
+ALAS O LOVE:
+Searching for: ala love
+5 total matching documents
+1. documents/RJ6.txt
+2. documents/RJ7.txt
+3. documents/RJ8.txt
+4. documents/RJ1.txt
+5. documents/RJ10.txt
+
+and:
+8 total matching documents
+1. documents/RJ3.txt
+2. documents/RJ5.txt
+3. documents/RJ10.txt
+4. documents/RJ2.txt
+5. documents/RJ4.txt
+6. documents/RJ8.txt
+7. documents/RJ7.txt
+8. documents/RJ1.txt
+
+reckon:
+1 total matching documents
+1. documents/RJ10.txt
+
+love:
+5 total matching documents
+1. documents/RJ6.txt
+2. documents/RJ7.txt
+3. documents/RJ8.txt
+4. documents/RJ1.txt
+5. documents/RJ10.txt
+
+fair:
+3 total matching documents
+1. documents/RJ9.txt
+2. documents/RJ10.txt
+3. documents/RJ1.txt

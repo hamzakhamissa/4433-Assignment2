@@ -1,0 +1,278 @@
+{
+  "took" : 3,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 10000,
+      "relation" : "gte"
+    },
+    "max_score" : 1.3331666,
+    "hits" : [
+      {
+        "_index" : "comments",
+        "_id" : "PO9nwZwBvOaw_7cEGM2r",
+        "_score" : 1.3331666,
+        "_source" : {
+          "gilded" : 0,
+          "distinguished" : null,
+          "retrieved_on" : 1473807889,
+          "author_flair_text" : null,
+          "author" : "[deleted]",
+          "edited" : false,
+          "id" : "cttsd",
+          "parent_id" : "t1_ctto6",
+          "subreddit" : "reddit.com",
+          "ups" : 6,
+          "score" : 6,
+          "created_utc" : 1165409297,
+          "author_flair_css_class" : null,
+          "body" : "Actually, if the bottom of the fridge trays weren't solid, the gap where the shelved where could retain all the cold air. Only the items inside the fridge would move, not the cold air.",
+          "controversiality" : 0,
+          "subreddit_id" : "t5_6",
+          "stickied" : false,
+          "link_id" : "t3_ttfa"
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "d-9nwZwBvOaw_7cEGM6r",
+        "_score" : 1.3248876,
+        "_source" : {
+          "parent_id" : "t3_tu1t",
+          "id" : "ctuid",
+          "edited" : false,
+          "author_flair_text" : null,
+          "author" : "[deleted]",
+          "retrieved_on" : 1473807901,
+          "distinguished" : null,
+          "gilded" : 0,
+          "link_id" : "t3_tu1t",
+          "stickied" : false,
+          "subreddit_id" : "t5_6",
+          "controversiality" : 0,
+          "body" : "The bears mauled *42* of the youths. Truly, the bible does contain the answer to the great question.",
+          "author_flair_css_class" : null,
+          "created_utc" : 1165420703,
+          "score" : 46,
+          "ups" : 46,
+          "subreddit" : "reddit.com"
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "xu9nwZwBvOaw_7cEGO2z",
+        "_score" : 1.3239679,
+        "_source" : {
+          "stickied" : false,
+          "link_id" : "t3_ual4",
+          "subreddit_id" : "t5_6",
+          "controversiality" : 1,
+          "body" : "\"...O’er the land of the free and the home of the brave.\"",
+          "created_utc" : 1165725566,
+          "author_flair_css_class" : null,
+          "score" : 3,
+          "ups" : 3,
+          "subreddit" : "reddit.com",
+          "edited" : false,
+          "parent_id" : "t3_ual4",
+          "id" : "cuapg",
+          "author" : "[deleted]",
+          "author_flair_text" : null,
+          "retrieved_on" : 1473808205,
+          "distinguished" : null,
+          "gilded" : 0
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "CvBnwZwBvOaw_7cEGAy2",
+        "_score" : 1.3194326,
+        "_source" : {
+          "parent_id" : "t3_upp3",
+          "id" : "cuq5c",
+          "edited" : false,
+          "author" : "Hinata",
+          "author_flair_text" : null,
+          "retrieved_on" : 1473808495,
+          "distinguished" : null,
+          "gilded" : 0,
+          "link_id" : "t3_upp3",
+          "stickied" : false,
+          "subreddit_id" : "t5_6",
+          "body" : "Ok, I rate the ones that creep me out the most: \r\n\r\nThe King\r\nThe Noid\r\nThe Nasty Hamster thing",
+          "controversiality" : 0,
+          "author_flair_css_class" : null,
+          "created_utc" : 1166068200,
+          "score" : -1,
+          "ups" : -1,
+          "subreddit" : "reddit.com"
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "de9nwZwBvOaw_7cEGLup",
+        "_score" : 1.3171656,
+        "_source" : {
+          "gilded" : 0,
+          "distinguished" : null,
+          "retrieved_on" : 1473807714,
+          "author" : "tqbf",
+          "author_flair_text" : null,
+          "id" : "ctkeg",
+          "parent_id" : "t3_tjlt",
+          "edited" : false,
+          "subreddit" : "reddit.com",
+          "score" : 9,
+          "ups" : 9,
+          "created_utc" : 1165248258,
+          "author_flair_css_class" : null,
+          "body" : "The quote in the title is the only funny line in the piece.\r\n",
+          "controversiality" : 0,
+          "subreddit_id" : "t5_6",
+          "stickied" : false,
+          "link_id" : "t3_tjlt"
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "Z-9nwZwBvOaw_7cEGLKn",
+        "_score" : 1.3092695,
+        "_ignored" : [
+          "body.keyword"
+        ],
+        "_source" : {
+          "created_utc" : 1165120167,
+          "author_flair_css_class" : null,
+          "score" : 10,
+          "ups" : 10,
+          "subreddit" : "reddit.com",
+          "stickied" : false,
+          "link_id" : "t3_tdfv",
+          "subreddit_id" : "t5_6",
+          "body" : "a) Prearm and Release for the Weapons.  The WSOs in the back cannot drop weapons unless the Pilot has this switch on.  This jet used to carry NUClear weapons during the Coldwar.\r\nb) The selections for autopilot are on the angled box to the left knee of the Pilot (left side).  There's a selection button for each parameter.  The WSOs are the navigators and typically define the waypoints.\r\nc) Weapons panel is not in the picture.  It's right of the Display panels for the right seater (offensive).\r\nd) Fault lamps.",
+          "controversiality" : 0,
+          "retrieved_on" : 1473807610,
+          "distinguished" : null,
+          "gilded" : 0,
+          "edited" : false,
+          "parent_id" : "t1_ctdsw",
+          "id" : "cteyz",
+          "author" : "forgedfoe",
+          "author_flair_text" : null
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "KvBnwZwBvOaw_7cEGBO2",
+        "_score" : 1.3092695,
+        "_ignored" : [
+          "body.keyword"
+        ],
+        "_source" : {
+          "author_flair_css_class" : null,
+          "created_utc" : 1166138962,
+          "score" : 1,
+          "ups" : 1,
+          "subreddit" : "reddit.com",
+          "link_id" : "t3_us8a",
+          "stickied" : false,
+          "subreddit_id" : "t5_6",
+          "body" : "For those interested in the title, from the novel's preface:\r\n\r\n\"One generation passeth away, and another generation cometh; but the earth abideth forever...The sun also ariseth, and the sun goeth down, and hasteth to the place where he arose...The wind goeth toward the south, and turneth about unto the north; it whirleth about continually, and the wind returneth again according to his circuits...All the rivers run into the sea; yet the sea is not full; unto the place from whence the rivers come, thither they return again.\" --Ecclesiastes",
+          "controversiality" : 0,
+          "retrieved_on" : 1473808567,
+          "distinguished" : null,
+          "gilded" : 0,
+          "edited" : false,
+          "parent_id" : "t1_cuspd",
+          "id" : "cuu00",
+          "author" : "degustibus",
+          "author_flair_text" : null
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "afBnwZwBvOaw_7cEGBK2",
+        "_score" : 1.30897,
+        "_ignored" : [
+          "body.keyword"
+        ],
+        "_source" : {
+          "author_flair_text" : null,
+          "author" : "Psy-Kosh",
+          "parent_id" : "t1_cutk8",
+          "edited" : false,
+          "id" : "cutll",
+          "gilded" : 0,
+          "distinguished" : null,
+          "retrieved_on" : 1473808558,
+          "controversiality" : 0,
+          "body" : "Uh... read through the article... the author doesn't consider religious schools to be the solution either.\r\n\r\n\"Is it private religious schools?\r\nNo. Most of the above problems are present in the parochial schools - especially large ones. The biggest benefit the parochial school offers is the ability to easily remove abusive kids and teachers. But the smart covert tormenters will survive. The larger the institution, the harder it is to expose them.\"",
+          "subreddit_id" : "t5_6",
+          "stickied" : false,
+          "link_id" : "t3_ut1n",
+          "subreddit" : "reddit.com",
+          "score" : 14,
+          "ups" : 14,
+          "created_utc" : 1166133809,
+          "author_flair_css_class" : null
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "JO9nwZwBvOaw_7cEGNms",
+        "_score" : 1.3074744,
+        "_source" : {
+          "gilded" : 0,
+          "distinguished" : null,
+          "retrieved_on" : 1473808017,
+          "author_flair_text" : null,
+          "author" : "Orange007",
+          "parent_id" : "t1_cu0gy",
+          "id" : "cu0p7",
+          "edited" : false,
+          "subreddit" : "reddit.com",
+          "score" : 12,
+          "ups" : 12,
+          "created_utc" : 1165519544,
+          "author_flair_css_class" : null,
+          "body" : "The boy isn't getting as much attention because he didn't contest the charges in the original case, while the girl appealed to the Supreme Court (the current case).",
+          "controversiality" : 0,
+          "subreddit_id" : "t5_6",
+          "stickied" : false,
+          "link_id" : "t3_u021"
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "8u9nwZwBvOaw_7cEGK2n",
+        "_score" : 1.3037684,
+        "_source" : {
+          "distinguished" : null,
+          "retrieved_on" : 1473807563,
+          "gilded" : 0,
+          "id" : "ctcj4",
+          "edited" : false,
+          "parent_id" : "t1_ct9nq",
+          "author" : "foobar321",
+          "author_flair_text" : null,
+          "score" : 1,
+          "ups" : 1,
+          "created_utc" : 1165074362,
+          "author_flair_css_class" : null,
+          "subreddit" : "reddit.com",
+          "subreddit_id" : "t5_6",
+          "stickied" : false,
+          "link_id" : "t3_t8ou",
+          "body" : "Its the fault of the prosecutors, not the judge.  \r\n\r\nThe perp is probably a hottie.",
+          "controversiality" : 0
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "took" : 11,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 50,
+      "relation" : "eq"
+    },
+    "max_score" : 10.5032835,
+    "hits" : [
+      {
+        "_index" : "comments",
+        "_id" : "vPBnwZwBvOaw_7cEGCa3",
+        "_score" : 10.5032835,
+        "_ignored" : [
+          "body.keyword"
+        ],
+        "_source" : {
+          "id" : "cv4ps",
+          "edited" : false,
+          "parent_id" : "t1_cv3d1",
+          "author_flair_text" : null,
+          "author" : "glguy",
+          "retrieved_on" : 1473808769,
+          "distinguished" : null,
+          "gilded" : 0,
+          "link_id" : "t3_v34f",
+          "stickied" : false,
+          "subreddit_id" : "t5_2fwo",
+          "body" : "Here is some example code that handles both cat with, and cat without arguments. (and as an added bonus, handles failures in a way similar to standard cat)\r\n\r\n    main = do\r\n       args ← getArgs\r\n       result ← cat args\r\n       exitWith $ if result\r\n                   then ExitSuccess\r\n                   else ExitFailure 1\r\n    \r\n    cat [   ] = getContents &gt;&gt;= putStr &gt;&gt; return True\r\n    cat files = liftM and $ forM files handleFile\r\n    \r\n    handleFile filename =\r\n       (readFile filename &gt;&gt;= putStr &gt;&gt; return True)\r\n       `catch`\r\n       (\\ exception -&gt; do\r\n           hPutStrLn stderr $ \"Open failed: \" ++ filename\r\n           return False)\r\n",
+          "controversiality" : 0,
+          "author_flair_css_class" : null,
+          "created_utc" : 1166381984,
+          "score" : 6,
+          "ups" : 6,
+          "subreddit" : "programming"
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "-vBnwZwBvOaw_7cEGBm3",
+        "_score" : 10.462163,
+        "_source" : {
+          "subreddit" : "reddit.com",
+          "author_flair_css_class" : null,
+          "created_utc" : 1166205885,
+          "score" : 1,
+          "ups" : 1,
+          "body" : "* emacs\r\n\r\n* nano\r\n\r\n* cat\r\n\r\n* ?",
+          "controversiality" : 0,
+          "link_id" : "t3_uxp4",
+          "stickied" : false,
+          "subreddit_id" : "t5_6",
+          "gilded" : 0,
+          "retrieved_on" : 1473808636,
+          "distinguished" : null,
+          "author_flair_text" : null,
+          "author" : "[deleted]",
+          "id" : "cuxra",
+          "edited" : false,
+          "parent_id" : "t3_uxp4"
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "uu9nwZwBvOaw_7cEGOmz",
+        "_score" : 10.2845745,
+        "_source" : {
+          "author" : "lilia12",
+          "author_flair_text" : null,
+          "id" : "cu8xa",
+          "edited" : false,
+          "parent_id" : "t3_u8x7",
+          "gilded" : 0,
+          "retrieved_on" : 1473808171,
+          "distinguished" : null,
+          "body" : "masturbating cat..so coool",
+          "controversiality" : 0,
+          "stickied" : false,
+          "link_id" : "t3_u8x7",
+          "subreddit_id" : "t5_6",
+          "subreddit" : "reddit.com",
+          "created_utc" : 1165683892,
+          "author_flair_css_class" : null,
+          "score" : 0,
+          "ups" : 0
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "1vBnwZwBvOaw_7cEGB-3",
+        "_score" : 10.2845745,
+        "_source" : {
+          "distinguished" : null,
+          "retrieved_on" : 1473808702,
+          "gilded" : 0,
+          "edited" : false,
+          "parent_id" : "t3_v16e",
+          "id" : "cv16f",
+          "author" : "GrrlScientist",
+          "author_flair_text" : null,
+          "score" : 1,
+          "ups" : 1,
+          "created_utc" : 1166286184,
+          "author_flair_css_class" : null,
+          "subreddit" : "reddit.com",
+          "subreddit_id" : "t5_6",
+          "stickied" : false,
+          "link_id" : "t3_v16e",
+          "body" : "Copy Cat has kittens.",
+          "controversiality" : 0
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "Xe9nwZwBvOaw_7cEGMqr",
+        "_score" : 9.786229,
+        "_source" : {
+          "gilded" : 0,
+          "retrieved_on" : 1473807861,
+          "distinguished" : null,
+          "author_flair_text" : null,
+          "author" : "Mr_Smartypants",
+          "edited" : false,
+          "parent_id" : "t3_tp7n",
+          "id" : "cts95",
+          "subreddit" : "reddit.com",
+          "created_utc" : 1165373876,
+          "author_flair_css_class" : null,
+          "score" : 3,
+          "ups" : 3,
+          "controversiality" : 0,
+          "body" : "This reminds me of Kircher's \"cat piano\"",
+          "stickied" : false,
+          "link_id" : "t3_tp7n",
+          "subreddit_id" : "t5_6"
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "Ye9nwZwBvOaw_7cEGN-t",
+        "_score" : 9.786229,
+        "_source" : {
+          "body" : "...and the cat and mouse game continues.",
+          "controversiality" : 0,
+          "subreddit_id" : "t5_2fwo",
+          "stickied" : false,
+          "link_id" : "t3_u3fr",
+          "subreddit" : "programming",
+          "ups" : 8,
+          "score" : 8,
+          "created_utc" : 1165587560,
+          "author_flair_css_class" : null,
+          "author_flair_text" : null,
+          "author" : "[deleted]",
+          "edited" : false,
+          "parent_id" : "t3_u3fr",
+          "id" : "cu446",
+          "gilded" : 0,
+          "distinguished" : null,
+          "retrieved_on" : 1473808080
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "-fBnwZwBvOaw_7cEGAm1",
+        "_score" : 9.786229,
+        "_source" : {
+          "controversiality" : 0,
+          "body" : "A giant cat and a giant toilet!",
+          "stickied" : false,
+          "link_id" : "t3_uouq",
+          "subreddit_id" : "t5_6",
+          "subreddit" : "reddit.com",
+          "created_utc" : 1166044735,
+          "author_flair_css_class" : null,
+          "score" : 3,
+          "ups" : 3,
+          "author" : "hotlemon",
+          "author_flair_text" : null,
+          "edited" : false,
+          "parent_id" : "t3_uouq",
+          "id" : "cup1w",
+          "gilded" : 0,
+          "retrieved_on" : 1473808474,
+          "distinguished" : null
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "5fBnwZwBvOaw_7cEGBC2",
+        "_score" : 9.786229,
+        "_source" : {
+          "retrieved_on" : 1473808546,
+          "distinguished" : null,
+          "gilded" : 0,
+          "edited" : false,
+          "parent_id" : "t1_cus1z",
+          "id" : "cusx1",
+          "author" : "[deleted]",
+          "author_flair_text" : null,
+          "created_utc" : 1166125397,
+          "author_flair_css_class" : null,
+          "score" : 5,
+          "ups" : 5,
+          "subreddit" : "reddit.com",
+          "stickied" : false,
+          "link_id" : "t3_uphi",
+          "subreddit_id" : "t5_6",
+          "controversiality" : 0,
+          "body" : "That's easy... [ceiling cat!](http://www.surrenderthesoul.com/ceiling_cat.jpg)"
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "zfBnwZwBvOaw_7cEGA22",
+        "_score" : 9.682392,
+        "_source" : {
+          "author" : "[deleted]",
+          "author_flair_text" : null,
+          "edited" : false,
+          "parent_id" : "t1_cuqj6",
+          "id" : "cur91",
+          "gilded" : 0,
+          "distinguished" : null,
+          "retrieved_on" : 1473808514,
+          "controversiality" : 0,
+          "body" : "My mother's cat used to do that.\r\n\r\nI think she got a new cat after this happened at around 3 AM one morning and she called the police...",
+          "subreddit_id" : "t5_6",
+          "link_id" : "t3_uouq",
+          "stickied" : false,
+          "subreddit" : "reddit.com",
+          "score" : 2,
+          "ups" : 2,
+          "author_flair_css_class" : null,
+          "created_utc" : 1166098548
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "hfBnwZwBvOaw_7cEGA22",
+        "_score" : 9.630676,
+        "_source" : {
+          "retrieved_on" : 1473808511,
+          "distinguished" : null,
+          "gilded" : 0,
+          "parent_id" : "t3_upuh",
+          "edited" : false,
+          "id" : "cur2a",
+          "author_flair_text" : null,
+          "author" : "mikkom",
+          "author_flair_css_class" : null,
+          "created_utc" : 1166093654,
+          "score" : 3,
+          "ups" : 3,
+          "subreddit" : "reddit.com",
+          "link_id" : "t3_upuh",
+          "stickied" : false,
+          "subreddit_id" : "t5_6",
+          "body" : "In other news, Cat is not a fish",
+          "controversiality" : 0
+        }
+      }
+    ]
+  }
+}

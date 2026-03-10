@@ -1,0 +1,101 @@
+### Cluster health
+$ curl -s localhost:9200/_cat/health?v
+epoch      timestamp cluster        status node.total node.data shards pri relo init unassign pending_tasks max_task_wait_time active_shards_percent
+1772771283 04:28:03  docker-cluster yellow          1         1      2   2    0    0        1             0                  -                 66.7%
+
+### Node list
+$ curl -s localhost:9200/_cat/nodes?v
+ip         heap.percent ram.percent cpu load_1m load_5m load_15m node.role   master name
+172.18.0.2           40          99   6    0.69    0.67     0.75 cdfhilmrstw *      a9a64cb0e3ad
+
+### Index list (before customer)
+$ curl -s localhost:9200/_cat/indices?v
+health status index    uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+yellow open   comments Y8PPfbneRIS2tH_GIiimOg   1   1     183039            0     95.2mb         95.2mb
+
+### Create customer index
+$ curl -s -XPUT localhost:9200/customer?pretty
+{
+  "acknowledged" : true,
+  "shards_acknowledged" : true,
+  "index" : "customer"
+}
+
+### Index list (after create customer)
+$ curl -s localhost:9200/_cat/indices?v
+health status index    uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+yellow open   comments Y8PPfbneRIS2tH_GIiimOg   1   1     183039            0     95.2mb         95.2mb
+yellow open   customer 0uH-a90RSF2pKiwxnn1irg   1   1          0            0       225b           225b
+
+### Put customer doc id=1
+$ curl -s -H Content-Type: application/json -XPUT localhost:9200/customer/_doc/1?pretty -d {"name":"John Doe"}
+{
+  "_index" : "customer",
+  "_id" : "1",
+  "_version" : 1,
+  "result" : "created",
+  "_shards" : {
+    "total" : 2,
+    "successful" : 1,
+    "failed" : 0
+  },
+  "_seq_no" : 0,
+  "_primary_term" : 1
+}
+
+### Get customer doc id=1
+$ curl -s localhost:9200/customer/_doc/1?pretty
+{
+  "_index" : "customer",
+  "_id" : "1",
+  "_version" : 1,
+  "_seq_no" : 0,
+  "_primary_term" : 1,
+  "found" : true,
+  "_source" : {
+    "name" : "John Doe"
+  }
+}
+
+### Delete customer index
+$ curl -s -XDELETE localhost:9200/customer?pretty
+{
+  "acknowledged" : true
+}
+
+### Index list (after delete customer)
+$ curl -s localhost:9200/_cat/indices?v
+health status index    uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+yellow open   comments Y8PPfbneRIS2tH_GIiimOg   1   1     183039            0     95.2mb         95.2mb
+
+### Index list (after deleting all indices)
+$ curl -s localhost:9200/_cat/indices?v
+health status index uuid pri rep docs.count docs.deleted store.size pri.store.size
+
+### Index list (after Reddit bulk index)
+$ curl -s localhost:9200/_cat/indices?v
+health status index    uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+yellow open   comments he2787tcTr6GRxRD_xD-pw   1   1      34292            0     25.1mb         25.1mb
+
+### Delete all indices before analyzer section
+$ curl -s -XDELETE localhost:9200/comments,customer?ignore_unavailable=true
+{"acknowledged":true}
+### Create comments index with my_analyzer
+$ curl -s -XPUT localhost:9200/comments?pretty -H Content-Type: application/json -d {"settings":{"analysis":{"analyzer":{"my_analyzer":{"tokenizer":"standard","filter":["lowercase","my_stemmer"]}},"filter":{"my_stemmer":{"type":"stemmer","name":"english"}}}}}
+{
+  "acknowledged" : true,
+  "shards_acknowledged" : true,
+  "index" : "comments"
+}
+
+### Set mapping for body to use my_analyzer
+$ curl -s -XPUT localhost:9200/comments/_mapping?pretty -H Content-Type: application/json -d {"properties":{"body":{"type":"text","analyzer":"my_analyzer"}}}
+{
+  "acknowledged" : true
+}
+
+### Index list (after reindex with custom analyzer)
+$ curl -s localhost:9200/_cat/indices?v
+health status index    uuid                   pri rep docs.count docs.deleted store.size pri.store.size
+yellow open   comments FcdQfjWBSRyQNNopwiM-Kw   1   1      31294            0     24.1mb         24.1mb
+

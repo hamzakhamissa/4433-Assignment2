@@ -1,0 +1,100 @@
+{
+  "took" : 2,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 3,
+      "relation" : "eq"
+    },
+    "max_score" : 16.929886,
+    "hits" : [
+      {
+        "_index" : "comments",
+        "_id" : "dvBnwZwBvOaw_7cEGAq1",
+        "_score" : 16.929886,
+        "_source" : {
+          "distinguished" : null,
+          "retrieved_on" : 1473808480,
+          "gilded" : 0,
+          "id" : "cupbx",
+          "edited" : false,
+          "parent_id" : "t1_cupam",
+          "author_flair_text" : null,
+          "author" : "skinnydog777",
+          "score" : 1,
+          "ups" : 1,
+          "created_utc" : 1166050306,
+          "author_flair_css_class" : null,
+          "subreddit" : "reddit.com",
+          "subreddit_id" : "t5_6",
+          "stickied" : false,
+          "link_id" : "t3_uouq",
+          "controversiality" : 0,
+          "body" : "Cats are good jumpers. \r\nI once saw a cat clear a fence.\r\nRichard Norton can teach Zimba I am confident."
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "8-9nwZwBvOaw_7cEGMOq",
+        "_score" : 10.794245,
+        "_ignored" : [
+          "body.keyword"
+        ],
+        "_source" : {
+          "subreddit" : "reddit.com",
+          "score" : 0,
+          "ups" : 0,
+          "author_flair_css_class" : null,
+          "created_utc" : 1165329487,
+          "body" : "It's not really about cats.  Basically, I said something along the lines of \"If you do X, Y might happen,\" and you said \"But I know of times where X was done and Y didn't happen.\"  So your argument really only does anything if it's in response to a claim like \"Whenever X happens, Y *always* happens.\"  So it's like me saying that throwing a cat off a roof is a bad idea and that the cat is likely to get hurt; then you say \"But my cousin did it and his cat was fine.\"  It's still a risky practice.\r\n\r\nAnd about it being a major contributing factor, I dunno.  I'm sure there are studies about this but I'm too lazy to look them up.",
+          "controversiality" : 1,
+          "subreddit_id" : "t5_6",
+          "link_id" : "t3_tl3j",
+          "stickied" : false,
+          "gilded" : 0,
+          "distinguished" : null,
+          "retrieved_on" : 1473807801,
+          "author" : "mpecsek",
+          "author_flair_text" : null,
+          "edited" : false,
+          "parent_id" : "t1_ctot3",
+          "id" : "ctp2u"
+        }
+      },
+      {
+        "_index" : "comments",
+        "_id" : "we9nwZwBvOaw_7cEGKqm",
+        "_score" : 10.665482,
+        "_ignored" : [
+          "body.keyword"
+        ],
+        "_source" : {
+          "author_flair_css_class" : null,
+          "created_utc" : 1165018713,
+          "score" : 1,
+          "ups" : 1,
+          "subreddit" : "reddit.com",
+          "link_id" : "t3_t9sp",
+          "stickied" : false,
+          "subreddit_id" : "t5_6",
+          "controversiality" : 0,
+          "body" : "I call nearly all of those tags overly picky relics of the day when HTML was trying to be a purely abstract markup in the style of docbook. On today's web they're as dumb as having a &lt;cat&gt; tag for talking about cats.\r\n\r\nOf all of those, only abbr and acronym make sense - because they actually add something new, a mouseover popup of the expansion.",
+          "retrieved_on" : 1473807530,
+          "distinguished" : null,
+          "gilded" : 0,
+          "id" : "ctapx",
+          "parent_id" : "t3_t9sp",
+          "edited" : false,
+          "author_flair_text" : null,
+          "author" : "JulianMorrison"
+        }
+      }
+    ]
+  }
+}

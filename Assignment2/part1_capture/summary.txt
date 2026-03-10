@@ -1,0 +1,7 @@
+query1_max_score=10.5032835
+query2_max_score=11.437443
+query3_max_score=16.929886
+query1_after_max_score=9.975786
+query2_after_max_score=9.975786
+query3_after_max_score=20.859785
+stopword_the_total_hits=10000
